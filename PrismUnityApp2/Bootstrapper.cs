@@ -2,6 +2,8 @@
 using Prism.Unity;
 using PrismUnityApp2.Views;
 using System.Windows;
+using ModuleA;
+using Prism.Modularity;
 
 namespace PrismUnityApp2
 {
@@ -14,7 +16,22 @@ namespace PrismUnityApp2
 
         protected override void InitializeShell()
         {
+            base.InitializeShell();
+
+            Application.Current.MainWindow = (Window) Shell;
             Application.Current.MainWindow.Show();
+        }
+
+        protected override void InitializeModules()
+        {
+            base.InitializeModules();
+        }
+
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            var catalog = new ModuleCatalog();
+            catalog.AddModule(typeof(ModuleAModule));
+            return catalog;
         }
     }
 }

@@ -132,6 +132,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modules\ModuleA\ModuleA.csproj">
+      <Project>{b582a3d7-3e9c-4b9a-8f63-116f659b270f}</Project>
+      <Name>ModuleA</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PrismUnityApp2.Infrastructure\PrismUnityApp2.Infrastructure.csproj">
       <Project>{7a5863c0-28c8-42e1-a55d-4bddcedf19cc}</Project>
       <Name>PrismUnityApp2.Infrastructure</Name>

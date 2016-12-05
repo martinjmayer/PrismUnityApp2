@@ -31,6 +31,7 @@ namespace ModuleA
             _regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, () => _container.Resolve<IContentAView>());
             _regionManager.RegisterViewWithRegion(RegionNames.ToolbarRegion, () => _container.Resolve<IToolbarAView>());
             var region = _regionManager.Regions[RegionNames.ToolbarRegion];
+            //_regionManager.RequestNavigate();
             
         }
     }
